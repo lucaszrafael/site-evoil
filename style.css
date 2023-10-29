@@ -1386,14 +1386,15 @@ img {
 
 
 .purchase-info .btn:last-of-type {
-    background: #2159A6;
+    background: #000;
     box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
     transition: all 0.4s ease;
 }
 
 .purchase-info .btn:hover {
     transform: translateY(-3px);
-    background-color: #319028;
+    background: linear-gradient(150deg, #2159A6, #fe0000e8,#000000ce,#FFFF01, #319028);
+    
 }
 
 .social-links {
@@ -1406,7 +1407,7 @@ img {
     align-items: center;
     justify-content: center;
     width: 32px;
-    background-color: #2159A6;
+    background-color: #000;
     height: 32px;
     color: #fff;
     margin: 0 0.2rem;
@@ -1418,8 +1419,7 @@ img {
 }
 
 .social-links a:hover {
-    background: #319028;
-    border-color: transparent;
+    background: linear-gradient(150deg, #2159A6, #fe0000e8,#000000ce,#FFFF01, #319028);
     color: #fff;
     transform: translateY(-3px);
 }
@@ -1515,7 +1515,7 @@ img {
     font-weight: 700;
     font-size: 35PX;
     margin-bottom: 20px;
-    color: #E32526;
+    color: #ffff01;
 }
 
 .section-container .columns.content .content-container p {
