@@ -412,6 +412,8 @@ section {
     font-size: 3em;
     color: #fff;
     margin-bottom: 3vh;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffff01; /* cor da borda */
     text-align: center;
     letter-spacing: 1px;
 }
@@ -816,9 +818,11 @@ footer {
 
 .about-us h3 {
     font-size: 22px;
-    color: #ffff01;
+    color: #fff;
     margin-bottom: 2vh;
-    text-decoration: underline;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffff01;; /* cor da borda */
+
 }
 
 .about-us p {
@@ -1515,7 +1519,9 @@ img {
     font-weight: 700;
     font-size: 35PX;
     margin-bottom: 20px;
-    color: #ffff01;
+    color: #fff;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffff01; /* cor da borda */
 }
 
 .section-container .columns.content .content-container p {
