@@ -65,7 +65,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px;
+    padding: 15px 100px;
     transition: 0.5s ease;
 
 }
@@ -87,7 +87,7 @@ header.sticky {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px;
+    padding: 15px 100px;
     transition: 0.5s ease;
 }
 

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <title>Sobre nós</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5599111112222" target="_blank">
-        <i class="fab fa-whatsapp" id="btnwpp"></i>
-    </a>
+		<i class="fab fa-whatsapp" id="btnwpp"></i>
+	</a>
     <header>
         <a href="home.html" class="logo"><img src="assets/logo.png"></a>
         <div class="menu-btn">
@@ -125,9 +125,9 @@
             </p>
           </div>
         <div class="media-icons">
-            <a href="https://www.facebook.com/evoilbrasil" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/evoilbrasil/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://web.whatsapp.com/send?phone=5512997154214" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/evoilbrasil"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/evoilbrasil/"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/send?phone=5512997154214"><i class="fab fa-whatsapp"></i></a>
         </div>
         <div class="slider-navigation">
             <div class="nav-btn active"></div>
@@ -137,7 +137,8 @@
             <div class="nav-btn"></div>
         </div>
     </section>
-    <script type="text/javascript">
+
+    <script>
         const menuBtn = document.querySelector(".menu-btn");
         const navigation = document.querySelector(".navigation");
 
@@ -148,11 +149,10 @@
 
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
+            var mediaicons = document.querySelector(".media-icons")
             header.classList.toggle("sticky", window.scrollY > 0)
-            var mediaicons = document.querySelector(".media-icons");
             mediaicons.classList.toggle("sticky", window.scrollY > 350)
         })
-
 
         const btns = document.querySelectorAll(".nav-btn");
         const slides = document.querySelectorAll(".img-slide");
@@ -197,131 +197,104 @@
         startAutoplay(); // Inicie o autoplay quando a página carregar
 
     </script>
-
-
-    <section class="about-us">
+    <main>
         <div class="container">
-            <div class="row">
-                <div class="flex">
-                    <h2>Sobre nós</h2>
-                    <h3>JOES NO FLATS BRASIL</h3>
-                    <p>Joe's No-Flats fornece ao mercado de bicicletas o selante anti-furo mais eficaz do mundo, premiado. Nossa linha de produtos inclui selantes à base de látex e livres de látex e amônia, soluções e acessórios sem câmara, câmaras de ar autovedantes, kits de conversão sem câmara, lubrificantes com base na tecnologia Nano mais avançada, excelentes produtos de limpeza e desengraxantes biodegradáveis, e muito mais.</p>
-                </div>
-                <div class="flex">
-                    <img src='assets/about.jpg'>
-                </div>
-            
-
-            </div>
-            <div class="row">
-
-                    <h3>VALOR</h3>
-                    <p>Nós amamos andar de bicicleta! Acreditamos que a natureza e o ar livre são onde devemos estar, com uma bicicleta. Nossos clientes desfrutam de andar de bicicleta em ambientes remotos, em terrenos fáceis ou difíceis. Alguns adoram pedalar em estradas sinuosas e pavimentadas, ou descer a toda velocidade. Outros apenas querem usar a bicicleta para ir ao trabalho ou usá-la na cidade como o melhor sistema de transporte. Alguns competem com suas bicicletas nas Olimpíadas ou em corridas da Copa do Mundo.
-
-                        O que une todos os nossos clientes é a aspiração de se concentrar na própria pedalada, sem preocupações com pneus furados, com uma bicicleta bem cuidada e sem problemas que possam diminuir a qualidade da sua pedalada. Tudo o que fazemos, dia após dia, é melhorar continuamente nossos produtos para atender a essa necessidade, ajustar nossas fórmulas para corresponder aos compostos de pneus mais avançados e desenvolver novos produtos inovadores.</p>
-            </div>
-            <div class="row">
-
-                <div class="flex">
-                    <h3>TECNOLOGIA</h3>
-                    <p>Nós contamos com décadas de desenvolvimento de produtos baseados em polímeros, tecnologia e profundo conhecimento em engenharia. Esse sólido background tecnológico permite que nossa equipe de pesquisa e desenvolvimento desenvolva produtos de forma criativa, com excelente desempenho e adaptações únicas às necessidades dos clientes. Ao mesmo tempo, aspiramos a tornar nossos produtos ecológicos e amigáveis ao meio ambiente, e a contribuir para a preservação de nossos belos ambientes naturais.</p>
-                </div>
-                <div class="flex">
-                    <img src='assets/about.png'>
+            <div class="product">
+                <div class="product-card">
+                    <!-- <h2 class="name">Nike Shoe</h2> -->
+                    <span class="price">Óleo Mineral Freio Hidráulico</span>
+                    <a class="popup-btn" href="detail/freio.html">Ver</a>
+                    <a href="detail/freio.html"><img src="assets/oleos/oleomineral1.webp" class="product-img" alt=""></a>
                 </div>
             </div>
-            <div class="row" style="margin-top: 2vh;">
-                <h3>REPOSIÇÃO</h3>
-                <p>
-                    Para garantir uma proteção eficaz com o selante, é preciso que o selante alcance qualquer parte relevante do pneu. Usar uma quantidade muito pequena de selante reduz o peso, mas pode deixá-lo exposto a uma proteção ineficaz. A quantidade de selante no seu pneu depende do tamanho do pneu e das condições de uso/armazenamento. Use de 60 ml a 120 ml de selante em cada pneu de mountain bike, de 40 ml a 60 ml para um único pneu de estrada e 125 ml para pneus de bicicletas gordas (fat bike) e pneus PLUS. O desenho abaixo mostra a diferença na área protegida do pneu ao usar 60 ml e 120 ml de selante por pneu. (Inserir desenho, se aplicável)</p>
-
+            <div class="product">
+                <div class="product-card">
+                    <!-- <h2 class="name">Smart Watch</h2> -->
+                    <span class="price">Óleo para Suspensão</span>
+                    <a class="popup-btn" href="detail/suspensao.html">Ver</a>
+                    <a href="detail/suspensao.html"><img src="assets/oleos/suspensoa.webp" class="product-img" alt=""></a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/joesnoflatsbrasil" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/joesnoflatsbrasil/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:joesnoflatsbrasil@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <!-- <section class="contact-page">
-
-        <div class="alert-success">
-                <span> E-mail enviado com sucesso!</span>
-            </div> -->
-    <!-- <div class="alert-error">
-                <span>Falha ao enviar e-mail! Tente novamente.</span>
-            </div> -->
-    <!-- <div class="contact-section">
-            <div class="contact-info">
-                <div><i class="fas fa-map-marker-alt"></i>Rua Astrogildo Machado, 520 - 12215490</div>
-                <div><i class="fas fa-envelope"></i>joesnoflatsbrasil@gmail.com</div>
-                <div><i class="fas fa-clock"></i>Segunda à Quinta 8:00 às 18:00<br><i class="fas fa-clock"></i>Sexta até
-                    17:00</div>
-                <div><i class="fas fa-phone"></i>(12) 98114-0358</div>
-            </div>
-
-            <div class="contact-form">
-                <h2> Fale Conosco</h2>
-                <form class="contact" action="" method="post">
-                    <input type="text" name="name" class="text-box" placeholder="Digite seu nome" required>
-                    <input type="email" name="email" class="text-box" placeholder="Digite seu e-mail" required>
-                    <textarea name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
-                    <input type="submit" name="submit" class="send-btn" value="Enviar">
-                </form>
+            <div class="product">
+                <div class="product-card">
+                    <span class="price"></span>
+                    <a class="popup-btn" href="detail/supercera.html">Ver</a>
+                    <a href="detail/supercera.html"><img src="assets/lubrificantes/.webp" class="product-img" alt=""></a>
+                </div>
             </div>
         </div>
-    </section> -->
 
+        <script type="text/javascript">
+            var popupViews = document.querySelectorAll('.popup-view');
+            var popupBtns = document.querySelectorAll('.popup-btn');
+            var closeBtns = document.querySelectorAll('.close-btn');
 
-    <footer class="footer-distributed">
+            //javascript for quick view button
+            var popup = function (popupClick) {
+                popupViews[popupClick].classList.add('active');
+            }
 
-        <div class="footer-left">
+            popupBtns.forEach((popupBtn, i) => {
+                popupBtn.addEventListener("click", () => {
+                    popup(i);
+                });
+            });
 
-            <p class="footer-links">
-                <a href="home.html">Home</a>
-                |
-                <a href="about.html">Sobre nós</a>
-                |
-            </p>
-            <img src="assets/logo.png" style="width: 200px; height: auto; margin-bottom: 2.5vh; margin-left: 6vh;" alt="">
-            <p class="footer-company-name">CNPJ: <strong>21.568.863/0001-30</strong></p>
-        </div>
+            //javascript for close button
+            closeBtns.forEach((closeBtn) => {
+                closeBtn.addEventListener("click", () => {
+                    popupViews.forEach((popupView) => {
+                        popupView.classList.remove('active');
+                    });
+                });
+            });
+        </script>
+        <footer class="footer-distributed">
 
-        <div class="footer-center">
-            <span>Contato</span>
-            <div>
-                <i class="fas fa-map-marker-alt"></i>
-                <p><a href="https://maps.app.goo.gl/pDEp8p8Ey8i1rA2K9">Rua Astrogildo Machado, 520<br>
-                        Monte Castelo <br> São José dos Campos - SP</p></a>
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="home.html">Home</a>
+                    |
+                    <a href="about.html">Sobre nós</a>
+                    |
+                </p>
+                <img src="assets/logo.png" style="width: 200px; height: auto; margin-bottom: 2.5vh; margin-left: 6vh;" alt="">
+                <p class="footer-company-name">CNPJ: <strong>21.568.863/0001-30</strong></p>
             </div>
 
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>(12) 99715-4214</p>
+            <div class="footer-center">
+                <span>Contato</span>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><a href="https://maps.app.goo.gl/pDEp8p8Ey8i1rA2K9">Rua Astrogildo Machado, 520<br>
+                            Monte Castelo <br> São José dos Campos - SP</p></a>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>(12) 99715-4214</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:joesnoflatsbrasil@gmail.com">joesnoflatsbrasil@gmail.com</a></p>
+                </div>
             </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">joesnoflatsbrasilgmail.com</a></p>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    <strong>JOES NO FLATS BRASIL</strong> o melhor selante do mundo.
+                </p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/joesnoflatsbrasil" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/joesnoflatsbrasil/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://web.whatsapp.com/send?phone=5512997154214"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>About the company</span>
-                <strong>JOES NO FLATS BRASIL</strong> o melhor selante do mundo.
-            </p>
-            <div class="footer-icons">
-                <a href="https://www.facebook.com/joesnoflatsbrasil" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/joesnoflatsbrasil/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com/send?phone=5512997154214"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+
 </body>
 
 </html>
