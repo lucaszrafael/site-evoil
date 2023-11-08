@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selantes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5512997154214" target="_blank">
+		<i class="fab fa-whatsapp" id="btnwpp"></i>
+	</a>
+    <header style="background-color: #000;position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;">
+        <a href="../home.html" class="logo"><img src="../assets/logo.png"></a>
+        <div class="menu-btn">
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="../product-greases.html">Graxas</a>
+                    <a href="../product-cleaners.html">Limpeza</a>
+                    <a href="../product-lubs.html">Lubrificantes</a>
+                    <a href="../product-others.html">Acessórios</a>
+                    <a href="../about.html">Sobre</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            var mediaicons = document.querySelector(".media-icons")
+            header.classList.toggle("sticky", window.scrollY > 0)
+            mediaicons.classList.toggle("sticky", window.scrollY > 350)
+        })
+    </script>
+        <div class="card-wrapper">
+            <div class="card">
+                <!-- card left -->
+                <div class="product-imgs">
+                    <div class="img-display">
+                        <div class="img-showcase">
+                            <img src="../assets/selantes/elite.png" alt="item img">
+                            <img src="../assets/selantes/racer1.jpg" alt="item img">
+                            <img src="../assets/selantes/racer2.jpg" alt="item img">
+                        </div>
+                    </div>
+                    <div class="img-select">
+                        <div class="img-item">
+                            <a href="#" data-id="1">
+                                <img src="../assets/selantes/elite.png" style= "border-radius: 8px;" alt="item img">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" data-id="2">
+                                <img src="../assets/selantes/racer1.jpg"style= "border-radius: 8px;" alt="item img">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" data-id="3">
+                                <img src="../assets/selantes/racer2.jpg" style= "border-radius: 8px;" alt="item img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card right -->
+                <div class="product-content">
+                    <h2 class="product-title">Elite Racer</h2>
+                    <a href="#" class="product-link">Selantes</a>
+
+                    <div class="product-price">
+                        <!-- <p class="last-price">Old Price: <span>$257.00</span></p>
+                        <p class="new-price">New Price: <span>$249.00 (5%)</span></p> -->
+                    </div>
+
+                    <div class="product-detail">
+                        <h2>Descrição: </h2>
+                        <p>Desenvolvido cientificamente para atender às altas demandas dos pilotos profissionais de Mountain Bike.
+
+                            <br>Veda instantaneamente furos na banda de rodagem de até 6 mm.
+                            <br>Veda pequenas fendas de forma mais rápida e permanente do que qualquer outro selante no mercado.
+                            <br>Para uso em pneus sem câmara, tubulares e câmaras de ar.
+                            <br>Para resistência eficaz contra furos, adicione selante fresco a cada 3-8 meses.
+                            <br>Projetado especificamente para pneus Tubeless Ready e conversão para pneus sem câmara.</p>
+                        <!-- <ul>
+                            <li>Color: <span>Black</span></li>
+                            <li>Available: <span>in stock</span></li>
+                            <li>Category: <span>Shoes</span></li>
+                            <li>Shipping Area: <span>All over the world</span></li>
+                            <li>Shipping Fee: <span>Free</span></li>
+                        </ul> -->
+                    </div>
+
+                    <div class="purchase-info">
+                        <a href="https://web.whatsapp.com/send?phone=5512997154214"><button type="button" class="btn">
+                            Tenho interesse <i class="fas fa-shopping-cart"></i>
+                        </button></a>
+                    </div>
+
+                    <div class="social-links">
+                        <p>Compartilhe</p>
+                        <a href="https://www.facebook.com/joesnoflatsbrasil" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/joesnoflatsbrasil/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
+    </script>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                |
+                <a href="about.html">Sobre nós</a>
+                |
+            </p>
+            <img src="/assets/logo.png" style="width: 200px; height: auto; margin-bottom: 2.5vh; margin-left: 6vh;" alt="">
+            <p class="footer-company-name">CNPJ: <strong>21.568.863/0001-30</strong></p>
+        </div>
+
+        <div class="footer-center">
+            <span>Contato</span>
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <p><a href="https://maps.app.goo.gl/pDEp8p8Ey8i1rA2K9">Rua Astrogildo Machado, 520<br>
+                        Monte Castelo <br> São José dos Campos - SP</p></a>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(12) 99715-4214</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:joesnoflatsbrasil@gmail.com">joesnoflatsbrasil@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>JOES NO FLATS BRASIL</strong> o melhor selante do mundo.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/joesnoflatsbrasil" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/joesnoflatsbrasil/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/send?phone=5512997154214"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
