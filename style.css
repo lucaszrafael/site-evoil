@@ -860,7 +860,7 @@ footer {
 }
 
 .about-us .social-links a:hover {
-    background: radial-gradient( #2159A6, #fe0000e8,#000000ce,#FFFF01, #319028);
+    background: linear-gradient(150deg, #2159A6, #fe0000e8,#000000ce,#FFFF01, #319028);
 }
 
 .about-us .btn i {
